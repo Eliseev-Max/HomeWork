@@ -20,8 +20,8 @@ class Figure(metaclass=ABCMeta):
     
 
 class Triangle(Figure):
-    __name = "Треугольник"
-    __angles = 3
+    __name = "Треугольник"      # Название фигуры и количество углов присвоены псевдочастным идентификаторам
+    __angles = 3                # Т.о. вне класса их нельзя изменить
     def __init__(self, side_a, side_b, side_c):
         try:
             assert (side_a + side_b)>side_c, "Треугольника с заданными сторонами не существует"
@@ -101,7 +101,7 @@ class Circle(Figure):
         #return 2*math.pi*self.radius
         return 2*3.14*self.radius
 
-class Rhombus():
+class Rhombus():                # Не является производным классом от абстрактного класса Figure
     def __init__(self,diagonal_1, diagonal_2):
         self.d1 = diagonal_1
         self.d2 = diagonal_2
